@@ -1,5 +1,5 @@
-em++ googleHashCode.cpp inputOutput.cpp GeneticAlgorithm.cpp Server.cpp ServerManager.cpp --preload-file inputData/a.in --preload-file outputData/output.out -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORT_ALL=1 -s WASM=1
+# C++ compilation:
+`em++ index.cpp inputOutput.cpp GeneticAlgorithm.cpp Server.cpp ServerManager.cpp --preload-file inputData/a.in --preload-file inputData/b.in --preload-file inputData/c.in --preload-file inputData/d.in --preload-file inputData/e.in --preload-file inputData/f.in -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORT_ALL=1 -s WASM=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall','cwrap']" -s TOTAL_MEMORY=1gb -O2`
 
-em++ googleHashCode.cpp inputOutput.cpp GeneticAlgorithm.cpp Server.cpp ServerManager.cpp --preload-file inputData/a.in -s DISABLE_EXCEPTION_CATCHING=0
-
-emcc googleHashCode.cpp inputOutput.cpp GeneticAlgorithm.cpp Server.cpp ServerManager.cpp -o hello.html --preload-file inputData/a.in -s DISABLE_EXCEPTION_CATCHING=0
+# run server
+`npm run start`

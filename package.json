@@ -1,0 +1,15 @@
+{
+  "name": "hashcodeui",
+  "version": "1.0.0",
+  "description": "em++ googleHashCode.cpp inputOutput.cpp GeneticAlgorithm.cpp Server.cpp ServerManager.cpp --preload-file inputData/a.in --preload-file outputData/output.out -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORT_ALL=1 -s WASM=1",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mrDreaml",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

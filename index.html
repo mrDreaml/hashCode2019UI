@@ -4,14 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/index.css">
 </head>
 <body>
-    <script src="./src/utils/a.out.js"></script>
-    <script>
-Module.onRuntimeInitialized = function() {
-    const runFunction = Module.cwrap('run', 'string', [])
-    console.log(runFunction(200));
-}
-    </script>
+    <div class="app">
+        <section class="main">
+            <div class="condition">
+                <div>
+                    <span>source file</span>
+                    <select name="inputSource" id="inputSource">
+                        <option value=0>A Example</option>
+                        <option value=1>B Narrow</option>
+                        <option value=2>C Urgent</option>
+                        <option value=3>D Typical</option>
+                        <option value=4>E Intriguing</option>
+                        <option value=5>F Big</option>
+                    </select>
+                </div>
+                <div>
+                    <span>population</span>
+                    <input id="populationQ" type="text" value="10">
+                </div>
+                <div>
+                    <span>stagnation period</span>
+                    <input id="stagnationPeriod" type="text" value="30">
+                </div>
+                <div>
+                    <span>selection quantity</span>
+                    <input id="selectionQ" type="text" value="5">
+                </div>
+                <div>
+                    <span>selection period</span>
+                    <input id="selectionPeriod" type="text" value="5">
+                </div>
+                <button class="runButton" id="runButton">Run</button>
+            </div>
+            <div class="result" id="result">
+
+            </div>
+        </section>
+        <section class="dataViewSimulation" id="dataV"></section>
+    </div>
+<script src="./src/c/a.out.js"></script>
+<script type="module" src="./src/js/index.js"></script>
 </body>
 </html>

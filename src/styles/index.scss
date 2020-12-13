@@ -1,0 +1,82 @@
+body {
+    background-color: #f5f7f9;
+}
+
+* {
+    &:focus { outline: none; }
+}
+
+.condition {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(73, 16, 206, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0, .15);
+
+    div {
+        display: flex;
+        margin: 4px 0;
+        * { width: 50%; }
+        input, select {
+            padding: 3px 7px;
+            border: none;
+            background-color: rgba(73, 16, 206, 0.1);
+            border-radius: 7px;
+            color: rgb(163, 0, 238);
+        }
+        span {
+            color: rgb(56, 1, 82);
+        }
+    }
+    .runButton {
+        transition: .1s;
+        margin: 10px auto;
+        width: 70px;
+        padding: 15px 25x;
+        border: 1px solid rgba(163, 0, 238, .5);
+        background-color: rgba(73, 16, 206, 0.1);
+        border-radius: 10px;
+        color: rgb(163, 0, 238);
+        &.disabled {
+            border: 1px solid rgba(238, 0, 79, 0.89);
+            background-color: rgba(206, 16, 79, 0.377);
+            pointer-events: none;
+        }
+    }
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    span {
+        font-weight: bold;
+        font-family: 'Russo One', sans-serif;
+
+        &.score {
+            font-size: 2em;
+        }
+    }
+}
+
+.genLoader {
+    width: 300px;
+    height: 225px;
+}
+
+.dataViewSimulation {
+    display: flex;
+    flex-direction: row;
+    .serverCol {
+        width: 15px;
+        flex-shrink: 0;
+        position: relative;
+        .compiledFile {
+            position: absolute;
+            background-color: #333;
+            width: 15px;
+        }
+    }
+}
